@@ -1,0 +1,18 @@
+[package]
+name = "monitor_server"
+version = "0.1.0"
+authors = ["suyanlong <592938410@qq.com>"]
+
+[dependencies]
+lazy_static = "0.2"
+hyper = "0.10.*"
+
+quick-error = "0.2"
+getopts = "*"
+rand = "0.3"
+
+[dependencies.prometheus]
+git = "https://github.com/pingcap/rust-prometheus.git"
+default-features = false
+features = ["nightly", "push"]
+
