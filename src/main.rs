@@ -74,7 +74,7 @@ fn main() {
             .inc();
         let value = rng.gen_range(1, 100);
         println!("{:?}",value);
-        PUSH_RAND_VAULE.with_label_values(&[thread.as_str(), "main3"]).add(value as f64);
+        PUSH_RAND_VAULE.with_label_values(&[thread.as_str(), "main3"]).set(value as f64);
 
         let metric_familys = prometheus::gather();
         _timer.observe_duration();
